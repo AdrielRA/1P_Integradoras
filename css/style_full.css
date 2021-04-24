@@ -1,0 +1,562 @@
+/* Parte comum para toda página */
+
+@font-face {
+	font-family: Lato;
+	src: url('../fonts/Lato-Regular.ttf') format('truetype');
+	font-weight: normal;
+	font-style: sans-serif;}
+
+*{padding: 0px; margin: 0px; text-align: center;}
+
+body{
+	padding: 0px;
+	margin: 0px;
+	background-color: #EEEEEE;
+	font-family: Lato, Arial, Helvetica, sans-serif;
+	font-size: 2.5vh;
+	color: #111111;
+	text-align: center;}
+
+#preloader{
+	z-index: 1000;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #111111;}
+
+#load{display: inline-flex;}
+
+#preloader h1 {font-size: 3vw; color: #FFFFFF;}
+
+#preloader img{width: 4vw; height: 4vw; filter: brightness(200%);}
+
+::-webkit-scrollbar{width: 1.9vh;}
+ 
+::-webkit-scrollbar-track{border-left: solid 0.2vh rgba(255, 255, 255, 0.2);}
+ 
+::-webkit-scrollbar-thumb{background-color: white;}
+
+.links{
+	z-index: 100;
+	width: 100%;
+	height: 8vh;
+	position: fixed;
+	display: flex;}
+
+.links label{
+	padding: 0px;
+	padding-top: 1.6vh;
+	flex-grow: 1;
+	cursor: pointer;
+	transition: all 0.4s;
+	text-align: center;
+	font-size: 110%;
+	text-shadow: 0.2vh 0.2vh 0.2vh #111111;
+	color: #FFFFFF;
+	border-right: solid 0.2vh rgba(255, 255, 255, 0.2);}
+
+.links label:hover{background-color: rgba(255, 255, 255, 0.2);}
+
+.scroll input{display: none;}
+
+.scroll{
+	display: flex;
+	width: 100vw;
+	height: 100vh;
+	overflow: hidden;}
+
+.sections{transition: all 0.4s;}
+
+.bloco{
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;}
+
+.conteudo{
+	color: #FFFFFF;
+	position: relative;
+	width: 100%;
+	height: 100%;
+	color: #EEEEEE;}
+
+/*---------------------------------------------------*/
+/* Começo do Conteúdo Inicial */
+
+.inicio{
+	z-index: 200;
+	position: relative;
+	width: 100%;
+	height: 100%;
+	color: #EEEEEE;
+	display: flex;
+	justify-content: center;
+	align-items: center;}
+
+.inicio h1{font-size: 6vw;}
+.inicio p{font-size: 1.57vw;}
+
+#infos{
+	position: absolute;
+	width: 100%;
+	height: auto;
+	margin-top: -5%;
+	padding-bottom: 10%;
+	justify-content: center;
+	align-items: center;
+	z-index: 2;
+	transition: 1s;
+	filter: grayscale(50%);}
+
+#infos:hover{
+	transition: 1s;
+	filter: grayscale(0%);}
+
+#texto p{margin: 1.6vh;}
+
+#bg{width: 100%;
+	height: 100%;
+	position: relative;
+	z-index: 1;
+	background-image: url("../img/Bg/Alfenas.jpg");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	transition: 1s;
+	filter: brightness(30%) blur(3px);}
+
+#bg:hover{
+	transition: 1s;
+	filter: brightness(50%) blur(1px);}
+
+#lab_btn{width: 100%; display: flex; justify-content: center;}
+
+#main_btn{
+	color: #111111;
+	background-color: #7FFF00;
+	border-radius: 0.7vw;
+	text-align: center;
+	border: none;
+	margin-top: 2.4vw;
+	margin-bottom: 2.4vw;
+	padding: 1.4vw;
+	line-height: 1.5em;
+	position: absolute;
+	box-sizing: border-box;
+	cursor: pointer;
+	transition: all 0.4s ease;}
+
+#main_btn:hover{
+	-webkit-transform: scale(1.3);
+        -ms-transform: scale(1.3);
+        	transform: scale(1.3);}
+
+/* Fim do Conteúdo Inicial */
+
+/*---------------------------------------------------*/
+/* Começo do Conteúdo da História */
+
+.containe{position: absolute;}
+
+#h-img{
+	width: 56.25%;
+	height: 100%;
+	bottom: 0px;
+	position: absolute;
+	background: url("../img/Bg/Igreja.png") no-repeat bottom left;
+	background-size: contain;}
+
+#h-img2{
+	z-index: -5;
+	width: 100%;
+	height: 100%;
+	bottom: 0px;
+	position: absolute;
+	background: url("../img/Bg/Céu.png") no-repeat center center;
+	background-size: cover;}
+
+#_hist{
+	width: 100%;
+	height: 100%;
+	position: relative;
+	display: flex;}
+
+.resumo{position: relative;
+	margin-top: 16vh;
+	margin-left: 30vw;
+	margin-bottom: 1.6vh;
+	padding: 1.6vh;
+	padding-top: 0px;
+	width: 60vw;
+	height: 65vh;
+	border-right: 1.6vh;
+	border: solid 0.2vh rgba(255, 255, 255, 0.2);
+	background-color: rgba(255, 255, 255, 0.1);
+	text-shadow: 0.2vh 0.2vh 0.2vh #111111;
+	overflow-y: scroll;}
+
+#historia h1{margin-bottom: 3.2vh; padding-top: 5vh;}
+
+#historia h2{font-size: 1em; margin-bottom: 2.5vh; margin-top: 2.5vh;}
+
+#historia p{text-indent: 2.5vh; text-align: justify;}
+
+/* Fim do Conteúdo da História */
+
+/*---------------------------------------------------*/
+/* Começo do Conteúdo das Personalidades */
+
+#todas_personalidades{
+	position: absolute;
+	margin-top: 8vh;
+	border: solid 0.2vh rgba(255, 255, 255, 0.2);
+	height: 79vh;
+	width: 100vw;
+	overflow-y: scroll;
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;}
+
+#personalidades label{cursor: pointer;}
+
+.personalidade{
+	width: 32vh;
+	height: 32vh;
+	margin: 2%;
+	margin-bottom: 1.6vh;
+	border: solid 0.2vh rgba(255, 255, 255, 0.2);
+	background-color: rgba(255, 255, 255, 0.1);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: transform 0.4s ease-out;}
+
+.personalidade:hover{
+	transition: transform 0.4s ease-out;
+	-webkit-transform: scale(1.2);
+        -ms-transform: scale(1.2);
+        	transform: scale(1.2);}
+
+.nome{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.8);
+	transition: all 0.4s ease-out;
+	justify-content: center;
+	align-items: center;
+	display: none;}
+
+.personalidade:hover .nome{display: flex; transition: all 0.4s;}
+
+.mais{
+	z-index: 3;
+	position: relative;
+	display: none;
+	width: 100vw;
+	height: 100vh;
+	justify-content: center;
+	align-items: center;
+	background-color: rgba(0,0,0,0.8);}
+
+.inform{
+	color: #111111;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	margin-top: 10vh;
+	width: 90%;
+	height: 79.5vh;
+	background-color: #EEEEEE;
+	box-shadow: 0 0 3.2vh 0 black;
+	padding: 1.6vh;
+	border: solid 0.2vh rgba(255, 255, 255, 0.5);
+	overflow-y: scroll;}
+
+.inform::-webkit-scrollbar-thumb{background-color: white; box-shadow: inset 0px 0px 0.2vh 0.2vh rgba(0, 0, 0, 0.5);}
+
+#info_1{display: none;}
+#info_2{display: none;}
+#info_3{display: none;}
+#info_4{display: none;}
+#info_5{display: none;}
+#info_6{display: none;}
+#info_7{display: none;}
+#info_8{display: none;}
+#info_9{display: none;}
+#info_10{display: none;}
+#info_11{display: none;}
+#info_12{display: none;}
+#info_13{display: none;}
+#info_14{display: none;}
+#info_15{display: none;}
+#info_16{display: none;}
+#info_17{display: none;}
+#info_18{display: none;}
+#info_19{display: none;}
+#info_20{display: none;}
+
+#_p1:checked ~ #info_1{display: flex;}
+#_p2:checked ~ #info_2{display: flex;}
+#_p3:checked ~ #info_3{display: flex;}
+#_p4:checked ~ #info_4{display: flex;}
+#_p5:checked ~ #info_5{display: flex;}
+#_p6:checked ~ #info_6{display: flex;}
+#_p7:checked ~ #info_7{display: flex;}
+#_p8:checked ~ #info_8{display: flex;}
+#_p9:checked ~ #info_9{display: flex;}
+#_p10:checked ~ #info_10{display: flex;}
+#_p11:checked ~ #info_11{display: flex;}
+#_p12:checked ~ #info_12{display: flex;}
+#_p13:checked ~ #info_13{display: flex;}
+#_p14:checked ~ #info_14{display: flex;}
+#_p15:checked ~ #info_15{display: flex;}
+#_p16:checked ~ #info_16{display: flex;}
+#_p17:checked ~ #info_17{display: flex;}
+#_p18:checked ~ #info_18{display: flex;}
+#_p19:checked ~ #info_19{display: flex;}
+#_p20:checked ~ #info_20{display: flex;}
+
+.sair{
+	color: #AAAAAA;
+	float: right;
+	position: fixed;
+	top: 14.32vh;
+	right: 6.9vw;
+	width: 2vh;
+	height: 2vh;
+	padding: 1.3vh;
+	padding-top: 0px;
+	padding-bottom: 1.9vh;
+	background-color: #EEEEEE;
+	border: solid 0.4vh #AAAAAA;}
+
+.sair:hover{
+	color: #AA8888;
+	background-color: #FFDDDD;
+	border-color: #AA8888;}
+
+#p1{background: url("../img/Per/01.jpg") no-repeat center center; background-size: cover; transition: all 0.2s ease-out;}
+#p2{background: url("../img/Per/02.jpg") no-repeat center center; background-size: cover; transition: all 0.2s ease-out;}
+#p3{background: url("../img/Per/03.jpg") no-repeat center center; background-size: cover; transition: all 0.2s ease-out;}
+#p4{background: url("../img/Per/04.jpg") no-repeat center center; background-size: cover; transition: all 0.2s ease-out;}
+#p5{background: url("../img/Per/05.jpg") no-repeat center center; background-size: cover; transition: all 0.2s ease-out;}
+#p6{background: url("../img/Per/06.jpg") no-repeat center center; background-size: cover; transition: all 0.2s ease-out;}
+#p7{background: url("../img/Per/07.jpg") no-repeat center center; background-size: cover; transition: all 0.2s ease-out;}
+#p8{background: url("../img/Per/08.jpg") no-repeat center center; background-size: cover; transition: all 0.2s ease-out;}
+#p9{background: url("../img/Per/09.jpg") no-repeat center center; background-size: cover; transition: all 0.2s ease-out;}
+#p10{background: url("../img/Per/10.jpg") no-repeat center center; background-size: cover; transition: all 0.2s ease-out;}
+#p11{background: url("../img/Per/11.jpg") no-repeat center center; background-size: cover; transition: all 0.2s ease-out;}
+#p12{background: url("../img/Per/12.jpg") no-repeat center center; background-size: cover; transition: all 0.2s ease-out;}
+#p13{background: url("../img/Per/13.jpg") no-repeat center center; background-size: cover; transition: all 0.2s ease-out;}
+#p14{background: url("../img/Per/14.jpg") no-repeat center center; background-size: cover; transition: all 0.2s ease-out;}
+#p15{background: url("../img/Per/15.jpg") no-repeat center center; background-size: cover; transition: all 0.2s ease-out;}
+#p16{background: url("../img/Per/16.jpg") no-repeat center center; background-size: cover; transition: all 0.2s ease-out;}
+#p17{background: url("../img/Per/17.jpg") no-repeat center center; background-size: cover; transition: all 0.2s ease-out;}
+#p18{background: url("../img/Per/18.jpg") no-repeat center center; background-size: cover; transition: all 0.2s ease-out;}
+#p19{background: url("../img/Per/19.jpg") no-repeat center center; background-size: cover; transition: all 0.2s ease-out;}
+#p20{background: url("../img/Per/20.png") no-repeat center center; background-size: cover; transition: all 0.2s ease-out;}
+
+.tudo{padding-top: 4.8vh;}
+
+.tudo h1{
+	width: 100%;
+	padding-top: 3.2vh;
+	padding-bottom: 3.2vh;
+	border-bottom: solid 0.4vh #AAAAAA;
+	background-color: rgba(0,0,0,0.03);}
+
+.tudo a{color: #111111;text-decoration: none; cursor: pointer;}
+
+.dados{
+	margin-top: 1.6vh;
+	padding-bottom: 4.8vh;
+	margin-bottom: 1.6vh;
+	height: auto;
+	border-bottom: solid 0.4vh #AAAAAA;
+	background-color: rgba(0,0,0,0.03);}
+
+.dados iframe{
+	width: 41.2vw;
+	height: 23.2vw;
+	margin-top: 4vh;
+	margin-bottom: 4vh;
+	border: solid 0.2vh rgba(0, 0, 0, 0.2);}
+
+#face{
+	width: 266px;
+	height: 480px;}
+
+#frase{padding-top: 1.6vh; text-align: center;}
+
+#vid{text-indent: 0px; text-align: center;}
+
+.dados h2{
+	text-align: center;
+	margin-bottom: 4.8vh;
+	padding-top: 3.2vh;
+	border-top: solid 0.3vh #CCCCCC;}
+
+.dados h3{font-size: 95%; margin-top: 1.6vh; margin-bottom: 3.2vh;}
+
+.dados h4{font-size: 80%; margin-top: 1.6vh; margin-bottom: 3.2vh;}
+
+.dados p{
+	text-indent: 3.2vh;
+	text-align: justify;
+	width: 70%;
+	margin-bottom: 3.2vh;
+	margin-left: 15%;
+	margin-right: 15%;}
+
+.dados li{margin-left: 15%; width: 70%; padding: 1.6vh;}
+
+#legenda{
+	margin-left: 14.8%;
+	background-color: #DDDDDD;
+	text-indent: 0px;
+	text-align: center;
+	margin-top: -5.5vh;
+	padding-top: 1.6vh;
+	padding-bottom: 1.6vh;
+	border: 2px solid #CCCCCC;
+	border-top: none;}
+
+#autor{margin-top: -1.6vh; text-align: right; font-size: 0.8em;}
+
+.dados img{
+	margin-top: 4.8vh;
+	margin-bottom: 3.2vh;
+	width: 70%;
+	border: solid 0.2vh rgba(0, 0, 0, 0.2);}
+
+.dados ul{list-style: none; margin-bottom: 3.2vh;}
+
+.fotos{
+	width: 100%;
+	height: auto;
+	padding-top: 8vh;
+	padding-bottom: 8vh;
+	background-color: #88DD22;
+	border: inset solid 0.2vh rgba(255, 255, 255, 0.2);
+	flex-wrap: wrap;}
+
+.fotos img{margin: 1.6vh; width: 32vh; height: 32vh; border: solid 0.2vh rgba(255, 255, 255, 0.2);}
+
+table{margin-left: 15%; width: 70%; background-color: #CCCCCC; margin-bottom: 3.2vh;}
+
+td{background-color: #DDDDDD; padding: 5px;}
+
+th{padding: 0.8vh; border-top: 0.2vh solid #BBBBBB;}
+
+#outros{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;}
+
+.outro{
+	width: 70vw;
+	height: auto;
+	background-color: rgba(30,144,255, 0.3);
+	padding-bottom: 4vh;
+	border-bottom: solid 0.4vh #1E90FF;
+	margin: 5vh;}
+
+.outro h1{
+	background-color: #1E90FF;
+	color: #EEEEEE;
+	border: none;}
+
+.outro h2{
+	padding-bottom: 2.5vh;
+	background-color: rgba(30,144,255, 0.8);
+	color: #EEEEEE;
+	border: none;}
+
+/* Fim do Conteúdo das Personalidades */
+
+/*---------------------------------------------------*/
+/* Começo do Conteúdo Sobre */
+
+.fim{margin-top: 8vh;
+	width: 100vw;
+	height: 100vh;
+	margin-bottom: 1.6vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;}
+
+#foto{
+	position: absolute;
+	top: 8vh;
+	width: 100vw;
+	height: 40vh;
+	border: solid 0.2vh rgba(255, 255, 255, 0.5);
+	background-color: rgba(255, 255, 255, 0.1);
+	background: url("../img/Bg/Galera.jpg") no-repeat top center;
+	background-size: cover;}
+
+#logo{
+	margin-top: 1.6vh;
+	width: 14.7vw;
+	filter: brightness(80%);
+	transition: all 0.2s ease-out;}
+
+#logo:hover{
+	filter: brightness(100%);
+	transform: scale(1.1);
+	transition: all 0.2s ease-out;}
+
+.rodape{
+	margin-top: 20vh;
+	position: absolute;
+	width: 75vw;
+	height: 30vh;
+	padding: 3.2vh;
+	font-size: 0.8em;
+	border: solid 0.2vh rgba(255, 255, 255, 0.2);
+	background-color: rgba(255, 255, 255, 0.1);
+	text-shadow: 0.2vh 0.2vh 0.2vh #111111;
+	overflow-y: scroll;}
+
+.rodape h1{font-size: 2em; margin-bottom: 1.6vh;}
+
+.rodape a{color: #EEEEEE;text-decoration: none;}
+
+#powered{margin-top: 3.2vh;text-align: left; justify-content: left;}
+
+/* Fim do Conteúdo Sobre */
+
+/*---------------------------------------------------*/
+/* Parte responsável pelo efeito FullPage e correção de alguns bugs do botão sair */
+
+#op_historia:checked ~ .sections{margin-top: -100vh;}
+
+#op_personalidades:checked ~ .sections{margin-top: -200vh;}
+
+#op_sobre:checked ~ .sections{margin-top: -300vh;}
+
+
+/*---------------------------------------------------*/
+/* Cores dos fundos */
+
+#historia{background-color: rgba(67, 127, 194, 0.8); background-image: linear-gradient(0deg,rgba(0,0,0,.5),rgba(0,0,0,0) 40%,rgba(0,0,0,0) 80%,rgba(0,0,0,.5));}
+
+#personalidades{background-color: #FFA500; background-image: linear-gradient(0deg,rgba(0,0,0,.5),rgba(0,0,0,0) 40%,rgba(0,0,0,0) 80%,rgba(0,0,0,.5));}
+
+#sobre{background-color: #414950; background-image: linear-gradient(0deg,rgba(0,0,0,.5),rgba(0,0,0,0) 40%,rgba(0,0,0,0) 80%,rgba(0,0,0,.5));}
+
+@media (max-width: 550px){
+	#preloader h1{font-size: 6vw;}
+	.inicio p{font-size: 2.5vw;}
+	.outro{margin: 1vw;}}
+
+@media (max-width: 330px){
+	.inicio p{font-size: 3vw;}
+	.links label{font-size: 100%;}
+	.outro{margin: 0.7vw;}}

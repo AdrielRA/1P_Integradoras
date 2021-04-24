@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Página não encontrada</title>
+	<meta charset="utf-8">
+	<meta lang="pt-br"/>
+	<meta name="viewport" content="width=device-width"/>
+	<meta name="theme-color" content="#030220"/>
+	<link rel = "shortcut icon" type = "imagem/x-icon" href = "img/ico_erro.ico"/>
+	<style type="text/css">
+		body{
+			font-size: 2vh;
+			font-family: Arial;
+			padding: 0px;
+			margin: 0px;
+		}
+		.container{
+			position: absolute;
+			width: 100vw;
+			height: 100vh;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			background-color: #DDDDDD;
+		}
+		a{
+			margin-top: 50vh;
+			text-decoration: none;
+			color: rgba(0, 0, 0, 0.66);
+			padding: 2vh;
+			line-height: 0px;
+			border: 0.1vh solid rgba(0, 0, 0, 0.66);
+			border-radius: 2vh;
+		}
+		img{
+			position: absolute;
+			max-width: 70vw;
+			max-height: 70vh;
+
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<img src="img/Erro.png">
+		<a href="FullPage.html" title="PERSONALIDADES ALFENENSES"><h1>VOLTAR</h1></a>
+	</div>
+</body>
+</html>
